@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+}
+
+/* HEADER */
+header {
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: gold;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* COUNTDOWN */
+.countdown {
+    margin: 30px 0;
+    font-size: 1.3rem;
+}
+
+/* GALLERY */
+.gallery {
+    padding: 40px 20px;
+}
+
+.gallery h2 {
+    margin-bottom: 20px;
+    color: gold;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px gold;
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    background-color: rgba(0,0,0,0.4);
+    margin-top: 30px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .gallery-container img {
+        height: 200px;
+    }
+}
+
+/* MUSIC BUTTON */
+#music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 30px;
+    background-color: gold;
+    color: #0f2027;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255,215,0,0.7);
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+#music-btn:hover {
+    background-color: white;
+}
